@@ -125,12 +125,12 @@
   echo "<br>&&&&&&&&&&&&&&&&&&<br><br>";
 
   // 🟢 7. Interfaces
-  interface Logger
+  interface Loggerv2
   {
     public function log($message);
   }
 
-  class FileLogger implements Logger
+  class FileLogger implements Loggerv2
   {
     public function log($message)
     {
