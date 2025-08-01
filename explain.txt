@@ -1,0 +1,107 @@
+✅ 1. تعريف الكلاس & الكائن:
+php
+Copy
+Edit
+class Car {
+    public $color;
+
+    public function drive() {
+        echo "Driving...";
+    }
+}
+
+$car = new Car();
+$car->color = "red";
+$car->drive();
+✅ 2. Constructor & Properties:
+php
+Copy
+Edit
+class User {
+    private $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+}
+✅ 3. Visibility:
+الكلمة	المعنى
+public	متاح في أي مكان
+private	متاح فقط داخل نفس الكلاس
+protected	متاح في الكلاس الحالي والوريثين
+
+✅ 4. Inheritance:
+php
+Copy
+Edit
+class Animal {
+    public function sound() {
+        echo "Some sound";
+    }
+}
+
+class Dog extends Animal {
+    public function sound() {
+        echo "Bark";
+    }
+}
+✅ 5. Interface:
+php
+Copy
+Edit
+interface Printable {
+    public function print();
+}
+
+class Report implements Printable {
+    public function print() {
+        echo "Printing...";
+    }
+}
+✅ 6. Trait:
+php
+Copy
+Edit
+trait Logger {
+    public function log($msg) {
+        echo $msg;
+    }
+}
+
+class App {
+    use Logger;
+}
+✅ 7. Static methods:
+php
+Copy
+Edit
+class Math {
+    public static function sum($a, $b) {
+        return $a + $b;
+    }
+}
+
+echo Math::sum(2, 3);
+✅ 8. Namespace & Autoload:
+php
+Copy
+Edit
+namespace App\Models;
+
+class User {}
+
+use App\Models\User;
+✅ 9. Common Magic Methods:
+Method	Purpose
+__construct()	استدعاء عند الإنشاء
+__toString()	عند طباعة الكائن
+__get() / __set()	للخصائص غير المعرفة
+
+✅ 10. Best Practices:
+استخدم type hints و return types
+
+قسم الكلاسات في ملفات مستقلة
+
+خليك دايمًا واضح في المسميات
+
+ما تكتبش كود خارج الـ class إلا في نقطة التشغيل
